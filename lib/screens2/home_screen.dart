@@ -1,4 +1,5 @@
 import 'package:chat/chatBot/bot.dart';
+import 'package:chat/checkup/OneMinuteChechup.dart';
 import 'package:chat/form/form.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -90,7 +91,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                 ),
                 CircleAvatar(
-                  radius: 38,
+                  radius: 30,
                   backgroundImage: NetworkImage(userMap?['url'] != null
                       ? "${userMap?['url']}"
                       : "https://imgs.search.brave.com/05TBeNcAKK_r3R0LB3pKtpxtWDXWh8ivakrk0aYd5_I/rs:fit:322:294:1/g:ce/aHR0cHM6Ly9zdGVl/bWl0aW1hZ2VzLmNv/bS9EUW1XQW9lVXBR/RFRaaUNoSjUxTFRG/U0NBMndWcUEybWpZ/WlVUWE5teldVS1pO/Qi9kb2N1Ym90Lmdp/Zg.gif"),
@@ -105,9 +106,16 @@ class _HomeScreen1State extends State<HomeScreen1> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ClinicVisitForm(),
+                    ),
+                  );
+                },
                 child: Container(
-                  height: size.height / 4.4,
+                  height: size.height / 4.0,
                   width: size.width / 2.2,
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
@@ -127,7 +135,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           decoration: BoxDecoration(
                               color: Color(0xFFF0EEFA), shape: BoxShape.circle),
                           child: Icon(
-                            Icons.home_filled,
+                            Icons.medical_services_outlined,
                             color: Color(0xFF7165D6),
                             size: 35,
                           ),
@@ -136,7 +144,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           height: 20,
                         ),
                         Text(
-                          "Home Visit",
+                          "Clinic Visit",
                           style: TextStyle(
                               fontSize: 18,
                               // color: Colors.white,
@@ -146,7 +154,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           height: 5,
                         ),
                         Text(
-                          "Call the doctor home",
+                          "Make an appointment",
                           style: TextStyle(
                             // fontSize: 18,
                             color: Colors.black54,
@@ -161,12 +169,12 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ClinicVisitForm(),
+                      builder: (context) => Checkup(),
                     ),
                   );
                 },
                 child: Container(
-                  height: size.height / 4.4,
+                  height: size.height / 4.0,
                   width: size.width / 2.2,
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
@@ -186,7 +194,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           decoration: BoxDecoration(
                               color: Colors.white, shape: BoxShape.circle),
                           child: Icon(
-                            Icons.add,
+                            Icons.medication_liquid_sharp,
                             color: Color(0xFF7165D6),
                             size: 35,
                           ),
@@ -195,7 +203,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           height: 20,
                         ),
                         Text(
-                          "Clinic Visit",
+                          "1 min. Checkup",
                           style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
@@ -205,7 +213,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           height: 5,
                         ),
                         Text(
-                          "Make an appointment",
+                          "Get Instant checkup",
                           style: TextStyle(
                             // fontSize: 18,
                             color: Colors.white54,
