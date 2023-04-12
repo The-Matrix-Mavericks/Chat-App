@@ -299,8 +299,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
+                    height: 90,
+                    width: 150,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
@@ -315,7 +315,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Cold",
@@ -340,8 +340,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
+                    height: 90,
+                    width: 150,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
@@ -356,7 +356,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Cough",
@@ -381,8 +381,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
+                    height: 90,
+                    width: 150,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
@@ -397,7 +397,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "fever",
@@ -422,8 +422,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
+                    height: 90,
+                    width: 150,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
@@ -438,7 +438,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Headache",
@@ -463,8 +463,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
+                    height: 90,
+                    width: 150,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
@@ -479,7 +479,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Temprature",
