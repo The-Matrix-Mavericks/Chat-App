@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../model/predict.dart';
 
 class Checkup extends StatefulWidget {

@@ -25,7 +25,7 @@ class Cough extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 500,
+                height: 550,
                 width: 100,
                 child: Column(
                   children: [
