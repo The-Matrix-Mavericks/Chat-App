@@ -25,7 +25,7 @@ class Cold extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 200,
+                height: 220,
                 width: 100,
                 child: Column(
                   children: [
@@ -36,7 +36,7 @@ class Cold extends StatelessWidget {
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                        'Winter cold kills more than twice as many Americans as summer heat does. \n The average snowflake falls at about 3 mph. \n Many viruses can cause colds, but rhinoviruses are most common. Infections spread through the air and close personal contact.\nSymptoms of a cold usually include sore throat, runny nose, coughing, sneezing, headaches, and body aches.')
+                        'Winter cold kills more than twice as many Americans as summer heat does. The average snowflake falls at about 3 mph. Many viruses can cause colds, but rhinoviruses are most common. Infections spread through the air and close personal contact.Symptoms of a cold usually include sore throat, runny nose, coughing, sneezing, headaches, and body aches.')
                   ],
                 ),
               ),

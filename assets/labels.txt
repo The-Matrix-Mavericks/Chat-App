@@ -1,0 +1,42 @@
+0 Fungal infection
+1 Allergy
+2 GERD
+3 Chronic cholestasis
+4 Drug Reaction
+5 Peptic ulcer diseae
+6 AIDS
+7 Diabetes
+8 Gastroenteritis
+9 Bronchial Asthma
+10 Hypertension 
+11 Migraine
+12 Cervical spondylosis
+13 Paralysis (brain hemorrhage)
+14 Jaundice
+15 Malaria
+16 Chicken pox 
+17 Dengue
+18 Typhoid
+19 hepatitis A
+20 Hepatitis B
+21 Hepatitis C
+22 Hepatitis D
+23 Hepatitis E
+24 Alcoholic hepatitis
+25 Tuberculosis
+26 Common Cold
+27 Pneumonia
+28 Dimorphic hemmorhoids(piles)
+29 Heart attack
+30 Varicose veins
+31 Hypothyroidism
+32 Hypoglycemia
+33 Osteoarthristis
+34 Arthritis
+35 (vertigo) Paroymsal  Positional Vertigo
+36 Acne
+37 Urinary tract infection
+38 Psoriasis
+39 Impetigo
+40 Typhoid
+41 Migraine
