@@ -299,9 +299,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
-                    padding: EdgeInsets.all(20),
+                    height: size.height / 15,
+                    width: size.width / 4,
+                    // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -312,7 +312,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
                             height: 20,
@@ -328,48 +328,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   ),
                 ),
                 SizedBox(
-                  width: 15,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Cough(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Color(0xFF7165D6),
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 4)
-                        ]),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            "Cough",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ]),
-                  ),
-                ),
-                SizedBox(
-                  width: 15,
+                  width: 10,
                 ),
                 InkWell(
                   onTap: () {
@@ -381,9 +340,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
-                    padding: EdgeInsets.all(20),
+                    height: size.height / 15,
+                    width: size.width / 4,
+                    // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -394,13 +353,13 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
                             height: 20,
                           ),
                           Text(
-                            "fever",
+                            "Fever",
                             style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
@@ -410,7 +369,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   ),
                 ),
                 SizedBox(
-                  width: 15,
+                  width: 10,
                 ),
                 InkWell(
                   onTap: () {
@@ -422,9 +381,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
-                    padding: EdgeInsets.all(20),
+                    height: size.height / 13,
+                    width: size.width / 4,
+                    // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -435,7 +394,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
                             height: 20,
@@ -451,7 +410,48 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   ),
                 ),
                 SizedBox(
-                  width: 15,
+                  width: 10,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Cough(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: size.height / 15,
+                    width: size.width / 4,
+                    // padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Cough",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
                 ),
                 InkWell(
                   onTap: () {
@@ -463,9 +463,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 9.5,
-                    width: size.width / 2.8,
-                    padding: EdgeInsets.all(20),
+                    height: size.height / 15,
+                    width: size.width / 4,
+                    // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -476,7 +476,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
                             height: 20,
@@ -490,9 +490,6 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           ),
                         ]),
                   ),
-                ),
-                SizedBox(
-                  width: 15,
                 ),
               ],
             ),
