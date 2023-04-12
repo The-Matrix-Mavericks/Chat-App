@@ -214,32 +214,32 @@ class _SettingScreen1State extends State<SettingScreen1> {
             SizedBox(
               height: 20,
             ),
-            ListTile(
-              onTap: () {},
-              leading: Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.deepPurple.shade200,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.notifications_active,
-                  color: Colors.deepPurple,
-                  size: 35,
-                ),
-              ),
-              title: Text(
-                "Notifications",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                ),
-              ),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            SizedBox(
-              height: 20,
-            ),
+            // ListTile(
+            //   onTap: () {},
+            //   leading: Container(
+            //     padding: EdgeInsets.all(10),
+            //     decoration: BoxDecoration(
+            //       color: Colors.deepPurple.shade200,
+            //       shape: BoxShape.circle,
+            //     ),
+            //     child: Icon(
+            //       Icons.notifications_active,
+            //       color: Colors.deepPurple,
+            //       size: 35,
+            //     ),
+            //   ),
+            //   title: Text(
+            //     "Notifications",
+            //     style: TextStyle(
+            //       fontWeight: FontWeight.w500,
+            //       fontSize: 20,
+            //     ),
+            //   ),
+            //   trailing: Icon(Icons.arrow_forward_ios_rounded),
+            // ),
+            // SizedBox(
+            //   height: 20,
+            // ),
             ListTile(
               onTap: () {
                 Navigator.push(

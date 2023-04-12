@@ -4,8 +4,14 @@ import 'package:flutter/cupertino.dart';
 
 import 'Example.dart';
 
-class Checkup extends StatelessWidget {
+class Checkup extends StatefulWidget {
+  @override
+  State<Checkup> createState() => _CheckupState();
+}
+
+class _CheckupState extends State<Checkup> {
   final AppinioSwiperController controller = AppinioSwiperController();
+
   final data = [
     "do you have itching ?",
     "do you have acidity ?",
@@ -42,6 +48,43 @@ class Checkup extends StatelessWidget {
     "do you have history_of_alcohol_consumption ?",
     "do you have palpitations ?",
   ];
+  List symp = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ];
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -75,7 +118,43 @@ class Checkup extends StatelessWidget {
                   cardsCount: data.length,
                   maxAngle: 140,
                   cardsBuilder: (BuildContext context, int index) {
-                    return ExampleCard(candidate: data[index]);
+                    return Container(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: size.height / 6,
+                            ),
+                            Text(
+                              "${data[count]}",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            SizedBox(
+                              height: size.height / 11,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () => setState(() => count++),
+                                  style: ButtonStyle(),
+                                  // onHover: ,
+                                  child: Text("Yes"),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () => setState(() => count++),
+                                  // onHover: ,
+                                  child: Text("No"),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      color: Colors.deepPurple.shade300,
+                    );
                   },
                 ),
               ),
