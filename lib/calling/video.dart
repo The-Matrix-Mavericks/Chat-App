@@ -29,7 +29,7 @@ class _MyAppState extends State<videoCall> {
     // _engine.enableAudio();
     // _engine.destroyCustomEncodedVideoTrack(0);
     // _engine.stopDirectCdnStreaming();
-    _engine.enableVideo();
+    // _engine.enableVideo();
     initAgora();
   }
 
