@@ -9,7 +9,8 @@ class Cold extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('About Cold..'),
+          title: Center(child: const Text('About Cold..')),
+          backgroundColor: Colors.deepPurple,
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
