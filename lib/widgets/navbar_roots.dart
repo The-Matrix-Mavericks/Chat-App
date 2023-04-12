@@ -7,6 +7,7 @@ import 'package:chat/screens2/schedule_screen.dart';
 import 'package:chat/screens2/setting_screen.dart';
 
 import '../chatting app/chat_home.dart';
+import '../payment/payment.dart';
 
 class NavBarRoots extends StatefulWidget {
   const NavBarRoots({super.key});
@@ -27,6 +28,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     ScheduleScreen1(),
     // setting screen
     SettingScreen1(),
+    UPIPayment(order: 346),
   ];
   @override
   Widget build(BuildContext context) {
@@ -59,6 +61,8 @@ class _NavBarRootsState extends State<NavBarRoots> {
                 icon: Icon(Icons.calendar_month), label: "Schedule"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: "Settings"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.payment), label: "Payment"),
           ],
         ),
       ),

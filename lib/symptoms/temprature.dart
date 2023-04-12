@@ -9,7 +9,8 @@ class Temprature extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('About Temprature..'),
+          title: Center(child: const Text('About Temprature..')),
+          backgroundColor: Colors.deepPurple,
         ),
         body: ListView(
           scrollDirection: Axis.vertical,

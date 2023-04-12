@@ -9,7 +9,8 @@ class Fever extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('About Fever..'),
+          title: Center(child: const Text('About Fever..')),
+          backgroundColor: Colors.deepPurple,
         ),
         body: ListView(
           scrollDirection: Axis.vertical,

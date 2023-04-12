@@ -4,12 +4,13 @@ import 'package:chat/form/form.dart';
 import 'package:chat/symptoms/cough.dart';
 import 'package:chat/symptoms/fever.dart';
 import 'package:chat/symptoms/headache.dart';
+import 'package:flutter/services.dart';
 import 'package:chat/symptoms/temprature.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import '../form/visitclinic.dart';
 import '../symptoms/cold.dart';
 
@@ -75,6 +76,19 @@ class _HomeScreen1State extends State<HomeScreen1> {
     );
   }
 
+  // _launchUrl() async {
+  //   // const _url = "https://google.com";
+  //   // ignore: deprecated_member_use
+  //   const _url = '';
+  //   // ignore: deprecated_member_use
+  //   if (await canLaunch(_url)) {
+  //     // ignore: deprecated_member_use
+  //     await launch(_url);
+  //   } else {
+  //     throw 'Could not launch $_url';
+  //   }
+  // }
+
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
@@ -98,12 +112,16 @@ class _HomeScreen1State extends State<HomeScreen1> {
                 ),
                 CircleAvatar(
                   radius: 30,
-                  backgroundImage: NetworkImage(userMap?['url'] != null
-                      ? "${userMap?['url']}"
+                  backgroundImage: NetworkImage(userMap?['_url'] != null
+                      ? "${userMap?['_url']}"
                       : "https://imgs.search.brave.com/05TBeNcAKK_r3R0LB3pKtpxtWDXWh8ivakrk0aYd5_I/rs:fit:322:294:1/g:ce/aHR0cHM6Ly9zdGVl/bWl0aW1hZ2VzLmNv/bS9EUW1XQW9lVXBR/RFRaaUNoSjUxTFRG/U0NBMndWcUEybWpZ/WlVUWE5teldVS1pO/Qi9kb2N1Ym90Lmdp/Zg.gif"),
                 )
               ],
             ),
+          ),
+          Divider(
+            height: 9,
+            // thickness: 2,
           ),
           SizedBox(
             height: 15,
@@ -175,9 +193,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Checkup(
-                        0,
-                      ),
+                      builder: (context) => Checkup(0),
                     ),
                   );
                 },
@@ -236,6 +252,61 @@ class _HomeScreen1State extends State<HomeScreen1> {
           SizedBox(
             height: 15,
           ),
+          InkWell(
+            onTap: () {
+              // ignore: deprecated_member_use
+              launch(
+                  'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
+            },
+            child: Container(
+              child: Center(
+                child: Text(
+                  "View Analysis",
+                  style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black54),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Divider(
+            height: 1,
+          ),
+          Center(
+              child: Container(
+                  height: 190, child: Image.asset("images/botgif.jpg"))),
+          Center(
+            child: Text(
+              "Your AI chatbot is here !",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: TextButton(
+              child: Text("Tap here to chat 💬",
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent)),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Bot()));
+              },
+            ),
+          ),
+          Divider(
+            height: 1,
+          ),
+          SizedBox(
+            height: 15,
+          ),
           Padding(
             padding: EdgeInsets.only(left: 15),
             child: Text(
@@ -282,7 +353,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
           // ),
           // ),
           SizedBox(
-            height: 15,
+            height: 25,
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -301,9 +372,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 15,
-                    width: size.width / 4,
-                    // padding: EdgeInsets.all(20),
+                    height: 90,
+                    width: 150,
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -314,10 +385,10 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Cold",
@@ -330,89 +401,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   ),
                 ),
                 SizedBox(
-                  width: 10,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Fever(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    height: size.height / 15,
-                    width: size.width / 4,
-                    // padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Color(0xFF7165D6),
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 4)
-                        ]),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            "Fever",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ]),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Headache(),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    height: size.height / 13,
-                    width: size.width / 4,
-                    // padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Color(0xFF7165D6),
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 4)
-                        ]),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            "Headache",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ]),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
+                  width: 15,
                 ),
                 InkWell(
                   onTap: () {
@@ -424,9 +413,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 15,
-                    width: size.width / 4,
-                    // padding: EdgeInsets.all(20),
+                    height: 90,
+                    width: 150,
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -437,10 +426,10 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Cough",
@@ -453,7 +442,89 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   ),
                 ),
                 SizedBox(
-                  width: 10,
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Fever(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 150,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "fever",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Headache(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 90,
+                    width: 150,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Headache",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
                 ),
                 InkWell(
                   onTap: () {
@@ -465,9 +536,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                     );
                   },
                   child: Container(
-                    height: size.height / 15,
-                    width: size.width / 4,
-                    // padding: EdgeInsets.all(20),
+                    height: 90,
+                    width: 150,
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
@@ -478,10 +549,10 @@ class _HomeScreen1State extends State<HomeScreen1> {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             "Temp",
@@ -493,117 +564,10 @@ class _HomeScreen1State extends State<HomeScreen1> {
                         ]),
                   ),
                 ),
+                SizedBox(
+                  width: 15,
+                ),
               ],
-            ),
-          ),
-
-          SizedBox(
-            height: 15,
-          ),
-          // Padding(
-          //   padding: EdgeInsets.only(left: 15),
-          //   child: Text(
-          //     "Popular Doctors",
-          //     style: TextStyle(
-          //         fontSize: 23,
-          //         fontWeight: FontWeight.w500,
-          //         color: Colors.black54),
-          //   ),
-          // ),
-          // GridView.builder(
-          //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          //     crossAxisCount: 2,
-          //   ),
-          //   itemCount: 4,
-          //   shrinkWrap: true,
-          //   physics: NeverScrollableScrollPhysics(),
-          //   itemBuilder: (context, index) {
-          //     return InkWell(
-          //       onTap: () {
-          //         Navigator.push(
-          //             context,
-          //             MaterialPageRoute(
-          //                 builder: (context) => AppointmentScreen1()));
-          //       },
-          //       child: Container(
-          //           margin: EdgeInsets.all(10),
-          //           padding: EdgeInsets.symmetric(vertical: 15),
-          //           decoration: BoxDecoration(
-          //               color: Colors.white,
-          //               borderRadius: BorderRadius.circular(10),
-          //               boxShadow: [
-          //                 BoxShadow(
-          //                     color: Colors.black12,
-          //                     blurRadius: 4,
-          //                     spreadRadius: 2),
-          //               ]),
-          //           child: Column(
-          //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //             children: [
-          //               CircleAvatar(
-          //                 radius: 35,
-          //                 backgroundImage: AssetImage("images/${imgs[index]}"),
-          //               ),
-          //               Text(
-          //                 "Dr. Doctor Name",
-          //                 style: TextStyle(
-          //                     fontSize: 18,
-          //                     fontWeight: FontWeight.w500,
-          //                     color: Colors.black54),
-          //               ),
-          //               Text(
-          //                 "Therapist",
-          //                 style: TextStyle(
-          //                     // fontSize: 18,
-          //                     // fontWeight: FontWeight.w500,
-          //                     color: Colors.black54),
-          //               ),
-          //               Row(
-          //                 mainAxisAlignment: MainAxisAlignment.center,
-          //                 mainAxisSize: MainAxisSize.min,
-          //                 children: [
-          //                   Icon(
-          //                     Icons.star,
-          //                     color: Colors.amber,
-          //                     size: 20,
-          //                   ),
-          //                   Text(
-          //                     "4.9",
-          //                     style: TextStyle(
-          //                         fontSize: 12,
-          //                         // fontWeight: FontWeight.w500,
-          //                         color: Colors.black54),
-          //                   )
-          //                 ],
-          //               )
-          //             ],
-          //           )),
-          //     );
-          //   },
-          // ),
-          Center(
-              child: Container(
-                  height: 190, child: Image.asset("images/botgif.jpg"))),
-          Center(
-            child: Text(
-              "Your AI chatbot is here !",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-            child: TextButton(
-              child: Text("Tap here to chat 💬",
-                  style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent)),
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => Bot()));
-              },
             ),
           ),
         ],
