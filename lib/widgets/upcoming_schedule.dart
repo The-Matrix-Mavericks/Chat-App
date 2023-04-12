@@ -1,3 +1,5 @@
+import 'package:chat/Schedule/popup.dart';
+import 'package:chat/Schedule/reschedule.dart';
 import 'package:flutter/material.dart';
 
 class UpcomingScheduleScreen extends StatelessWidget {
@@ -118,7 +120,11 @@ class UpcomingScheduleScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const Pop(),
+                          ),
+                        ),
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
@@ -138,7 +144,11 @@ class UpcomingScheduleScreen extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ReScheduleForm(),
+                          ),
+                        ),
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
@@ -275,7 +285,13 @@ class UpcomingScheduleScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const Pop(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
@@ -295,7 +311,11 @@ class UpcomingScheduleScreen extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ReScheduleForm(),
+                          ),
+                        ),
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
@@ -432,7 +452,11 @@ class UpcomingScheduleScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const Pop(),
+                          ),
+                        ),
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
@@ -452,7 +476,11 @@ class UpcomingScheduleScreen extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ReScheduleForm(),
+                          ),
+                        ),
                         child: Container(
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),

@@ -11,6 +11,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 import '../form/visitclinic.dart';
 import '../symptoms/cold.dart';
 
@@ -88,6 +89,21 @@ class _HomeScreen1State extends State<HomeScreen1> {
   //     throw 'Could not launch $_url';
   //   }
   // }
+  openBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+      url: 'https://lalithakre.github.io/Data-Visualization-of-ML-Model/',
+      customTabsOptions: CustomTabsOptions(
+          colorScheme: CustomTabsColorScheme.dark,
+          toolbarColor: Colors.deepPurple,
+          secondaryToolbarColor: Colors.deepPurple,
+          navigationBarColor: Colors.deepPurple,
+          addDefaultShareMenuItem: true,
+          instantAppsEnabled: true,
+          showTitle: true,
+          urlBarHidingEnabled: true),
+    );
+    // androidToolbarColor: Colors.deepPurple);
+  }
 
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -254,9 +270,10 @@ class _HomeScreen1State extends State<HomeScreen1> {
           ),
           InkWell(
             onTap: () {
+              openBrowserTab();
               // ignore: deprecated_member_use
-              launch(
-                  'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
+              // launch(
+              //     'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

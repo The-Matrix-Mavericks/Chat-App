@@ -1,3 +1,4 @@
+import 'package:chat/Schedule/reschedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -196,7 +197,7 @@ class AppointmentScreen1 extends StatelessWidget {
                       ),
                       Spacer(),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => {},
                           child: Text(
                             "See all",
                             style: TextStyle(
