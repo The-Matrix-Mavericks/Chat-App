@@ -84,6 +84,12 @@ class _CheckupState extends State<Checkup> {
     0
   ];
   int count = 0;
+  void incre(int index) {
+    setState(() {
+      index++;
+      count++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
