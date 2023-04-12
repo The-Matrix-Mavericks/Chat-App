@@ -25,7 +25,7 @@ class Temprature extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 300,
+                height: 600,
                 width: 100,
                 child: Column(
                   children: [
@@ -51,6 +51,8 @@ class Temprature extends StatelessWidget {
                         style: TextStyle(fontSize: 19),
                       ),
                     ),
+                    Text(
+                        'It is commonly accepted that normal human body temperature is 98.6 degrees F or 37 degrees C. However, there is also a number of variations to normal body temperature that depend on many factors, such as the time of the day, outside temperature, age of the person and others.'),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
@@ -60,6 +62,11 @@ class Temprature extends StatelessWidget {
                             fontSize: 25, fontWeight: FontWeight.bold),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 4.0),
+                      child: Text(
+                          'Keep in mind: Electric fans may provide comfort, but when the temperature is in the high 90s, they will not prevent heat-related illness. Taking a cool shower or bath or moving to an air-conditioned place is a much better way to cool off. Use your stove and oven less to maintain a cooler temperature in your home.'),
+                    )
                   ],
                 ),
               ),

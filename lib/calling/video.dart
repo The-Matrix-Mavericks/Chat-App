@@ -4,10 +4,10 @@ import 'package:agora_uikit/agora_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-const appId = "21700f337dbf41b9a412469cccc8b475";
+const appId = "9efbfb540e7c4fc0945e4593d23dc924";
 const token =
-    "007eJxTYHC4rz7z7t5dlnUbA1hqefptrjtIGrsUJz9VsRAXtzaZL6zAYGRobmCQZmxsnpKUZmKYZJloYmhkYmaZDAQWSSbmpg2rjFMaAhkZunTfMDBCIYjPzpBUlF+SkVrEwAAAoIEdJA==";
-const channel = "brother";
+    "007eJxTYGix2CSgd1C3/qCL4MOXM15YlaavDa15XvG2L0dn3y/nPl8FBgvTlGTzNAMDoyRTIxMgx9LIMsXSItXQyNTSKNnUPO1+t1lKQyAjw5S+TgZGKATxWRhS8vNSGRgAanQf3g==";
+const channel = "done";
 
 void main() => runApp(const MaterialApp(home: videoCall()));
 
@@ -146,16 +146,19 @@ class _MyAppState extends State<videoCall> {
                   BuiltInButtons.switchCamera,
                 ],
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    _engine.disableVideo();
-                    // _engine.destroyCustomEncodedVideoTrack(0);
-                    // _engine.stopDirectCdnStreaming();
-                    _engine.disableAudio();
+              Padding(
+                padding: const EdgeInsets.only(top: 640, left: 20),
+                child: ElevatedButton(
+                    onPressed: () {
+                      _engine.disableVideo();
+                      // _engine.destroyCustomEncodedVideoTrack(0);
+                      // _engine.stopDirectCdnStreaming();
+                      _engine.disableAudio();
 
-                    Navigator.pop(context);
-                  },
-                  child: Icon(Icons.call_end)),
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.call_end)),
+              ),
             ],
           ),
         ),

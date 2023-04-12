@@ -6,7 +6,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 
-const String appId = "21700f337dbf41b9a412469cccc8b475";
+const String appId = "85dc7f002b52485d929d98e12592c57f";
 
 void main() => runApp(const MaterialApp(home: voiceCall()));
 
@@ -18,9 +18,9 @@ class voiceCall extends StatefulWidget {
 }
 
 class _MyAppState extends State<voiceCall> {
-  String channelName = "brother";
+  String channelName = "done";
   String token =
-      "007eJxTYHC4rz7z7t5dlnUbA1hqefptrjtIGrsUJz9VsRAXtzaZL6zAYGRobmCQZmxsnpKUZmKYZJloYmhkYmaZDAQWSSbmpg2rjFMaAhkZunTfMDBCIYjPzpBUlF+SkVrEwAAAoIEdJA==";
+      "007eJxTYGix2CSgd1C3/qCL4MOXM15YlaavDa15XvG2L0dn3y/nPl8FBgvTlGTzNAMDoyRTIxMgx9LIMsXSItXQyNTSKNnUPO1+t1lKQyAjw5S+TgZGKATxWRhS8vNSGRgAanQf3g==";
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   int uid = 0; // uid of the local user

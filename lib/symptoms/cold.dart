@@ -58,9 +58,6 @@ class Cold extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'While it is impossible to completely prevent the spread of colds, there are steps you can take to reduce your and your family\'s chances of becoming infected with a virus that causes colds:',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
                       ),
                     ),
                     Text(
