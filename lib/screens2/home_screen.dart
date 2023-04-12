@@ -94,9 +94,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
       url: 'https://lalithakre.github.io/Data-Visualization-of-ML-Model/',
       customTabsOptions: CustomTabsOptions(
           colorScheme: CustomTabsColorScheme.dark,
-          toolbarColor: Colors.deepPurple,
-          secondaryToolbarColor: Colors.deepPurple,
-          navigationBarColor: Colors.deepPurple,
+          toolbarColor: Color(0xFF7165D6),
+          secondaryToolbarColor: Color(0xFF7165D6),
+          navigationBarColor: Color(0xFF7165D6),
           addDefaultShareMenuItem: true,
           instantAppsEnabled: true,
           showTitle: true,
