@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Fever extends StatelessWidget {
-  const Fever({super.key});
+class Headache extends StatelessWidget {
+  const Headache({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Fever extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('About Fever..'),
+          title: const Text('About Headache..'),
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -19,7 +19,7 @@ class Fever extends StatelessWidget {
               child: Container(
                 height: 200,
                 width: 100,
-                child: Image.asset("images/fever.png"),
+                child: Image.asset("images/headache.jpg"),
               ),
             ),
             Padding(
@@ -30,11 +30,11 @@ class Fever extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Things to know about Fever',
+                      'Things to know about Headache',
                       style: TextStyle(),
                     ),
                     Text(
-                      'Tips to Prevent The Fever',
+                      'Tips to Prevent The Headache',
                       style: TextStyle(),
                     ),
                   ],

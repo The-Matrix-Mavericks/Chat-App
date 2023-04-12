@@ -1,8 +1,13 @@
 import 'package:chat/chatBot/bot.dart';
 import 'package:chat/form/form.dart';
+import 'package:chat/symptoms/cough.dart';
+import 'package:chat/symptoms/fever.dart';
+import 'package:chat/symptoms/headache.dart';
+import 'package:chat/symptoms/temprature.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:http/http.dart';
 
 import '../form/visitclinic.dart';
 import '../symptoms/cold.dart';
@@ -231,41 +236,260 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   color: Colors.black),
             ),
           ),
+          // SizedBox(
+          //   height: 60,
+          // child: ListView.builder(
+          //   shrinkWrap: true,
+          //   itemCount: symptoms.length,
+          //   scrollDirection: Axis.horizontal,
+          //   itemBuilder: (context, index) {
+          //     return GestureDetector(
+          //       onTap: () => Navigator.push(context,
+          //           MaterialPageRoute(builder: (_) => symptoms[index])),
+          //       child: Container(
+          //         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+          //         padding: EdgeInsets.symmetric(horizontal: 15),
+          //         decoration: BoxDecoration(
+          //             color: Color(0xFFF4F6FA),
+          //             borderRadius: BorderRadius.circular(10),
+          //             boxShadow: [
+          //               BoxShadow(
+          //                   color: Colors.black12,
+          //                   blurRadius: 4,
+          //                   spreadRadius: 2),
+          //             ]),
+          //         child: Center(
+          //             child: Text(
+          //           symptoms[index],
+          //           style: TextStyle(
+          //               fontSize: 16,
+          //               fontWeight: FontWeight.w600,
+          //               color: Colors.black54),
+          //         )),
+          //       ),
+          //     );
+          //   },
+          // ),
+          // ),
           SizedBox(
-            height: 60,
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: symptoms.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () => Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => Cold())),
+            height: 15,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 10,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Cold(),
+                      ),
+                    );
+                  },
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    height: size.height / 9.5,
+                    width: size.width / 2.8,
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: Color(0xFFF4F6FA),
+                        color: Color(0xFF7165D6),
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
                               color: Colors.black12,
-                              blurRadius: 4,
-                              spreadRadius: 2),
+                              blurRadius: 6,
+                              spreadRadius: 4)
                         ]),
-                    child: Center(
-                        child: Text(
-                      symptoms[index],
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black54),
-                    )),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Cold",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
                   ),
-                );
-              },
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Cough(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: size.height / 9.5,
+                    width: size.width / 2.8,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Cough",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Fever(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: size.height / 9.5,
+                    width: size.width / 2.8,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "fever",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Headache(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: size.height / 9.5,
+                    width: size.width / 2.8,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Headache",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Temprature(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: size.height / 9.5,
+                    width: size.width / 2.8,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7165D6),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4)
+                        ]),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Temprature",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+              ],
             ),
           ),
+
           SizedBox(
             height: 15,
           ),
