@@ -11,6 +11,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 import '../form/visitclinic.dart';
 import '../symptoms/cold.dart';
 
@@ -88,6 +89,21 @@ class _HomeScreen1State extends State<HomeScreen1> {
   //     throw 'Could not launch $_url';
   //   }
   // }
+  openBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+      url: 'https://lalithakre.github.io/Data-Visualization-of-ML-Model/',
+      customTabsOptions: CustomTabsOptions(
+          colorScheme: CustomTabsColorScheme.dark,
+          toolbarColor: Color(0xFF7165D6),
+          secondaryToolbarColor: Color(0xFF7165D6),
+          navigationBarColor: Color(0xFF7165D6),
+          addDefaultShareMenuItem: true,
+          instantAppsEnabled: true,
+          showTitle: true,
+          urlBarHidingEnabled: true),
+    );
+    // androidToolbarColor: Colors.deepPurple);
+  }
 
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -254,20 +270,30 @@ class _HomeScreen1State extends State<HomeScreen1> {
           ),
           InkWell(
             onTap: () {
+              openBrowserTab();
               // ignore: deprecated_member_use
-              launch(
-                  'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
+              // launch(
+              //     'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
             },
-            child: Container(
-              child: Center(
-                child: Text(
-                  "View Analysis",
-                  style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black54),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    "View Analysis",
+                    style: TextStyle(
+                        fontSize: 23,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black54),
+                  ),
                 ),
-              ),
+                SizedBox(
+                  width: 7,
+                ),
+                Container(
+                    height: 50,
+                    child: Image.asset("images/4_Bar_Chart_10_Seconds.webp"))
+              ],
             ),
           ),
           SizedBox(
@@ -305,7 +331,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
             height: 1,
           ),
           SizedBox(
-            height: 15,
+            height: 30,
           ),
           Padding(
             padding: EdgeInsets.only(left: 15),
