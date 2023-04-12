@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../form/visitclinic.dart';
+import '../symptoms/cold.dart';
 
 // ignore: must_be_immutable
 class HomeScreen1 extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
   // const HomeScreen1({super.key});
   List symptoms = [
     "Temprature",
-    "Snuffle",
+    "Headache",
     "Fever",
     "Cough",
     "Cold",
@@ -237,26 +238,30 @@ class _HomeScreen1State extends State<HomeScreen1> {
               itemCount: symptoms.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  decoration: BoxDecoration(
-                      color: Color(0xFFF4F6FA),
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 4,
-                            spreadRadius: 2),
-                      ]),
-                  child: Center(
-                      child: Text(
-                    symptoms[index],
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black54),
-                  )),
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => Cold())),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    decoration: BoxDecoration(
+                        color: Color(0xFFF4F6FA),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 4,
+                              spreadRadius: 2),
+                        ]),
+                    child: Center(
+                        child: Text(
+                      symptoms[index],
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black54),
+                    )),
+                  ),
                 );
               },
             ),
