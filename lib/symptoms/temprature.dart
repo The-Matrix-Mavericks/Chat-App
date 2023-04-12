@@ -25,7 +25,7 @@ class Temprature extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 500,
+                height: 600,
                 width: 100,
                 child: Column(
                   children: [

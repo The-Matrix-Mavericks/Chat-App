@@ -482,7 +482,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                             height: 20,
                           ),
                           Text(
-                            "Temprature",
+                            "Temp",
                             style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
