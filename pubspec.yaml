@@ -27,6 +27,8 @@ dependencies:
   zego_uikit_prebuilt_call: ^3.1.1
   appinio_swiper: ^2.0.0
   upi_india: ^3.0.1
+  url_launcher: ^6.1.10
+  # upi_pay: ^0.2.4
   # appinio_swiper: ...
 
 dev_dependencies:

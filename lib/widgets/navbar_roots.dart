@@ -28,7 +28,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     ScheduleScreen1(),
     // setting screen
     SettingScreen1(),
-    UPIPayment(),
+    UPIPayment(order: 346),
   ];
   @override
   Widget build(BuildContext context) {

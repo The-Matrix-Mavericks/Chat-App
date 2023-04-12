@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:upi_india/upi_india.dart';
 
 class UPIPayment extends StatefulWidget {
+  num order;
+  UPIPayment({required this.order});
   @override
   _UPIPaymentState createState() => _UPIPaymentState();
 }
@@ -40,7 +42,8 @@ class _UPIPaymentState extends State<UPIPayment> {
       receiverName: 'Lalit Thakre',
       transactionRefId: 'TestingUpiIndiaPlugin',
       transactionNote: 'Not actual. Just an example.',
-      amount: 1.00,
+      amount: 1,
+      flexibleAmount: true,
     );
   }
 
@@ -141,7 +144,7 @@ class _UPIPaymentState extends State<UPIPayment> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('UPI'),
+        title: Center(child: Text('UPI')),
       ),
       body: Column(
         children: <Widget>[
