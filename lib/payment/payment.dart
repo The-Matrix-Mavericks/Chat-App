@@ -40,7 +40,7 @@ class _UPIPaymentState extends State<UPIPayment> {
       receiverName: 'Lalit Thakre',
       transactionRefId: 'TestingUpiIndiaPlugin',
       transactionNote: 'Not actual. Just an example.',
-      amount: 100.00,
+      amount: 1.00,
     );
   }
 
