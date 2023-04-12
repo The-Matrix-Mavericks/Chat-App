@@ -44,6 +44,7 @@ class Checkup extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       debugShowCheckedModeBanner: false,
@@ -67,7 +68,9 @@ class Checkup extends StatelessWidget {
                     bottom: 20,
                   ),
                   allowUnswipe: true,
+                  unlimitedUnswipe: true,
                   threshold: 50,
+                  controller: controller,
                   duration: const Duration(milliseconds: 500),
                   cardsCount: data.length,
                   maxAngle: 140,
@@ -75,6 +78,9 @@ class Checkup extends StatelessWidget {
                     return ExampleCard(candidate: data[index]);
                   },
                 ),
+              ),
+              SizedBox(
+                height: size.height / 17,
               ),
             ],
           ),
