@@ -275,16 +275,25 @@ class _HomeScreen1State extends State<HomeScreen1> {
               // launch(
               //     'https://lalithakre.github.io/Data-Visualization-of-ML-Model/');
             },
-            child: Container(
-              child: Center(
-                child: Text(
-                  "View Analysis",
-                  style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black54),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    "View Analysis",
+                    style: TextStyle(
+                        fontSize: 23,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black54),
+                  ),
                 ),
-              ),
+                SizedBox(
+                  width: 7,
+                ),
+                Container(
+                    height: 50,
+                    child: Image.asset("images/4_Bar_Chart_10_Seconds.webp"))
+              ],
             ),
           ),
           SizedBox(
