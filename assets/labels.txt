@@ -38,3 +38,5 @@
 37 Urinary tract infection
 38 Psoriasis
 39 Impetigo
+40 Typhoid
+41 Migraine
