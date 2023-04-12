@@ -9,7 +9,7 @@ class ClinicVisitForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Visit',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -145,32 +145,54 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 15),
-              child: Row(
-                children: <Widget>[
+              child: Column(
+                children: [
+                  Text(
+                    'Schedule Consultation',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+                  ),
                   SizedBox(
-                    width: 40,
+                    height: 0,
                   ),
-                  Expanded(
-                    child: Text(
-                      _visitDate == null
-                          ? 'Select a visit date'
-                          : 'Visit Date: ${_visitDate!.day}/${_visitDate!.month}/${_visitDate!.year}',
-                      style: TextStyle(
-                        fontSize: 21,
+                  Text(""),
+                  Row(
+                    children: <Widget>[
+                      SizedBox(
+                        width: 40,
                       ),
-                    ),
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.calendar_today),
-                    onPressed: () {
-                      _selectDate(context);
-                    },
+                      Expanded(
+                        child: Text(
+                          _visitDate == null
+                              ? 'Select a visit date'
+                              : 'Visit Date: ${_visitDate!.day}/${_visitDate!.month}/${_visitDate!.year}',
+                          style: TextStyle(
+                            fontSize: 21,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.calendar_today),
+                        onPressed: () {
+                          _selectDate(context);
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
             SizedBox(
               height: 20,
+            ),
+            Text(
+              'Select From',
+              style: TextStyle(fontSize: 21),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(right: 15.0),
@@ -184,6 +206,37 @@ class _MyHomePageState extends State<MyHomePage> {
                       _startTime == null
                           ? 'Select start time'
                           : 'Start Time: ${_formatTimeOfDay(_startTime!)}',
+                      style: TextStyle(fontSize: 21),
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.access_time),
+                    onPressed: () {
+                      _selectStartTime(context);
+                    },
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "To",
+              style: TextStyle(fontSize: 21),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 15.0),
+              child: Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Expanded(
+                    child: Text(
+                      _startTime == null
+                          ? 'Select end time'
+                          : 'End Time: ${_formatTimeOfDay(_startTime!)}',
                       style: TextStyle(fontSize: 21),
                     ),
                   ),

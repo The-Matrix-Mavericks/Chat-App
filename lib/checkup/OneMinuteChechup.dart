@@ -84,12 +84,6 @@ class _CheckupState extends State<Checkup> {
     0
   ];
   int count = 0;
-  void incre(int index) {
-    setState(() {
-      index++;
-      count++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,75 +93,65 @@ class _CheckupState extends State<Checkup> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Get Instant checkup")),
+          title: Center(
+            child: Text("Get Instant checkup"),
+          ),
         ),
-        body: CupertinoPageScaffold(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.65,
-                child: AppinioSwiper(
-                  padding: const EdgeInsets.only(
-                    left: 25,
-                    right: 25,
-                    top: 20,
-                    bottom: 20,
-                  ),
-                  allowUnswipe: true,
-                  unlimitedUnswipe: true,
-                  threshold: 50,
-                  controller: controller,
-                  duration: const Duration(milliseconds: 500),
-                  cardsCount: data.length,
-                  maxAngle: 140,
-                  cardsBuilder: (BuildContext context, int index) {
-                    return Container(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.all(30.0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: size.height / 6,
-                            ),
-                            Text(
-                              "${data[count]}",
+        body: Center(
+          child: Container(
+            color: Color.fromARGB(255, 149, 118, 201),
+            height: 550,
+            width: 300,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 150,
+                ),
+                count < data.length
+                    ? Column(
+                        children: [
+                          Center(
+                            child: Text(
+                              "Predict",
                               style: TextStyle(fontSize: 20),
                             ),
-                            SizedBox(
-                              height: size.height / 11,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () => setState(() => count++),
-                                  style: ButtonStyle(),
-                                  // onHover: ,
-                                  child: Text("Yes"),
-                                ),
-                                ElevatedButton(
-                                  onPressed: () => setState(() => count++),
-                                  // onHover: ,
-                                  child: Text("No"),
-                                )
-                              ],
-                            )
-                          ],
+                          ),
+                          SizedBox(
+                            height: 60,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              ElevatedButton(
+                                  onPressed: () {
+                                    setState(
+                                      () {
+                                        count++;
+                                      },
+                                    );
+                                  },
+                                  child: Text("dsf")),
+                              ElevatedButton(
+                                  onPressed: () {
+                                    setState(
+                                      () {
+                                        count++;
+                                      },
+                                    );
+                                  },
+                                  child: Text("dsf"))
+                            ],
+                          )
+                        ],
+                      )
+                    : Center(
+                        child: Text(
+                          data[count],
+                          style: TextStyle(fontSize: 20),
                         ),
                       ),
-                      color: Colors.deepPurple.shade300,
-                    );
-                  },
-                ),
-              ),
-              SizedBox(
-                height: size.height / 17,
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -176,7 +160,75 @@ class _CheckupState extends State<Checkup> {
 }
 
 
-
+//  CupertinoPageScaffold(
+//           child: Column(
+//             children: [
+//               SizedBox(
+//                 height: 10,
+//               ),
+//               SizedBox(
+//                 height: MediaQuery.of(context).size.height * 0.65,
+//                 child: AppinioSwiper(
+//                   padding: const EdgeInsets.only(
+//                     left: 25,
+//                     right: 25,
+//                     top: 20,
+//                     bottom: 20,
+//                   ),
+//                   allowUnswipe: true,
+//                   unlimitedUnswipe: true,
+//                   threshold: 50,
+//                   controller: controller,
+//                   duration: const Duration(milliseconds: 500),
+//                   cardsCount: data.length,
+//                   maxAngle: 140,
+//                   cardsBuilder: (BuildContext context, int index) {
+//                     return Container(
+//                       alignment: Alignment.center,
+//                       child: Padding(
+//                         padding: const EdgeInsets.all(30.0),
+//                         child: Column(
+//                           children: [
+//                             SizedBox(
+//                               height: size.height / 6,
+//                             ),
+//                             Text(
+//                               "${data[index]}+{$index}",
+//                               style: TextStyle(fontSize: 20),
+//                             ),
+//                             SizedBox(
+//                               height: size.height / 11,
+//                             ),
+//                             Row(
+//                               mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                               children: [
+//                                 ElevatedButton(
+//                                   onPressed: () => setState(() => index++),
+//                                   style: ButtonStyle(),
+//                                   // onHover: ,
+//                                   child: Text("Yes"),
+//                                 ),
+//                                 ElevatedButton(
+//                                   onPressed: () => setState(() => index++),
+//                                   // onHover: ,
+//                                   child: Text("No"),
+//                                 )
+//                               ],
+//                             )
+//                           ],
+//                         ),
+//                       ),
+//                       color: Colors.deepPurple.shade300,
+//                     );
+//                   },
+//                 ),
+//               ),
+//               SizedBox(
+//                 height: size.height / 17,
+//               ),
+//             ],
+//           ),
+//         ),
 
 
 
