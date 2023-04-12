@@ -175,7 +175,9 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Checkup(),
+                      builder: (context) => Checkup(
+                        0,
+                      ),
                     ),
                   );
                 },
