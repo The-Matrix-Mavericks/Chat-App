@@ -103,14 +103,16 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Confirm'),
             ),
             TextButton(
-              child: Text('Cancel'),
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const UpcomingScheduleScreen(),
-                  ),
-                );
+                // Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (context) => const ReScheduleForm(),
+                //   ),
+                // );
+                Navigator.pop(context);
               },
+              child: Text('Cancel'),
+              
             ),
           ],
         );
