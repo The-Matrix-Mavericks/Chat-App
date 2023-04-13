@@ -105,6 +105,8 @@ class _HomeScreen1State extends State<HomeScreen1> {
     // androidToolbarColor: Colors.deepPurple);
   }
 
+  final TextEditingController _input = TextEditingController();
+
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
@@ -594,6 +596,18 @@ class _HomeScreen1State extends State<HomeScreen1> {
                   width: 15,
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: TextFormField(
+              controller: _input,
+              decoration: InputDecoration(
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
             ),
           ),
         ],
