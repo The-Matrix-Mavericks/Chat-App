@@ -16,6 +16,7 @@ class _CheckupState extends State<Checkup> {
   final AppinioSwiperController controller = AppinioSwiperController();
 
   final data = [
+    "Do you have high temprature ?",
     "do you have back pain ?",
     "do you have loss of smell ?",
     "do you have internal itching ?",

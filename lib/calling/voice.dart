@@ -18,9 +18,9 @@ class voiceCall extends StatefulWidget {
 }
 
 class _MyAppState extends State<voiceCall> {
-  String channelName = "done";
+  String channelName = "lallu";
   String token =
-      "007eJxTYGix2CSgd1C3/qCL4MOXM15YlaavDa15XvG2L0dn3y/nPl8FBgvTlGTzNAMDoyRTIxMgx9LIMsXSItXQyNTSKNnUPO1+t1lKQyAjw5S+TgZGKATxWRhS8vNSGRgAanQf3g==";
+      "007eJxTYLjKpZhcqq3zXlip98xvz+rJ+xcsDLl7bzr/fhvmPmuGoA4FBgvTlGTzNAMDoyRTIxMgx9LIMsXSItXQyNTSKNnUPE3c1jylIZCRwWLJSgZGKATxWRlyEnNyShkYAMwmHRc=";
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   int uid = 0; // uid of the local user

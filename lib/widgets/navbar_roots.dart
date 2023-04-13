@@ -26,9 +26,9 @@ class _NavBarRootsState extends State<NavBarRoots> {
     ChatHomeScreen(),
     // schedule screen
     ScheduleScreen1(),
+    UPIPayment(),
     // setting screen
     SettingScreen1(),
-    UPIPayment(order: 346),
   ];
   @override
   Widget build(BuildContext context) {
@@ -60,9 +60,9 @@ class _NavBarRootsState extends State<NavBarRoots> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month), label: "Schedule"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings"),
-            BottomNavigationBarItem(
                 icon: Icon(Icons.payment), label: "Payment"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: "Settings"),
           ],
         ),
       ),

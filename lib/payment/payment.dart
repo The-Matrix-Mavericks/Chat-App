@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:upi_india/upi_india.dart';
 
 class UPIPayment extends StatefulWidget {
-  num order;
-  UPIPayment({required this.order});
   @override
   _UPIPaymentState createState() => _UPIPaymentState();
 }
@@ -38,11 +36,11 @@ class _UPIPaymentState extends State<UPIPayment> {
   Future<UpiResponse> initiateTransaction(UpiApp app) async {
     return _upiIndia.startTransaction(
       app: app,
-      receiverUpiId: "8319381819@paytm",
-      receiverName: 'Lalit Thakre',
+      receiverUpiId: "7974954757@ybl",
+      receiverName: 'Yogesh Kumar Soni',
       transactionRefId: 'TestingUpiIndiaPlugin',
       transactionNote: 'Payment for MedXpert app',
-      amount: 1,
+      // amount: 1,
       flexibleAmount: true,
     );
   }
