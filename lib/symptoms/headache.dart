@@ -10,7 +10,7 @@ class Headache extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: const Text('About Headache..')),
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color(0xFF7165D6),
         ),
         body: ListView(
           scrollDirection: Axis.vertical,

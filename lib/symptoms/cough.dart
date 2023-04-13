@@ -10,7 +10,7 @@ class Cough extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: const Text('About Cough..')),
-          backgroundColor: Colors.deepPurple,
+          backgroundColor:Color(0xFF7165D6),
         ),
         body: ListView(
           scrollDirection: Axis.vertical,

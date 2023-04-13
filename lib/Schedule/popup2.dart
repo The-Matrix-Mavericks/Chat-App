@@ -1,5 +1,6 @@
 import 'package:chat/Schedule/reschedule.dart';
 import 'package:chat/Screens/HomeScreen.dart';
+import 'package:chat/Screens/MainPage.dart';
 import 'package:chat/screens2/home_screen.dart';
 import 'package:chat/widgets/upcoming_schedule.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class Pop2 extends StatelessWidget {
             child: InkWell(
                 onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const ReScheduleForm(),
+                        builder: (context) =>  MainPage(),
                       ),
                     ),
                 child: Text('OK')),
