@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/cupertino.dart';
+import '../model/notPredict.dart';
 import '../model/predict.dart';
 
 class Checkup extends StatefulWidget {
@@ -73,9 +74,10 @@ class _CheckupState extends State<Checkup> {
     0,
     0,
     0,
+    0,
   ];
   int count;
-
+  int check = 0;
   _CheckupState(this.count);
 
   @override
@@ -122,6 +124,7 @@ class _CheckupState extends State<Checkup> {
                                         symp[count] = 1;
                                         print(symp[count]);
                                         count++;
+                                        check++;
                                       },
                                     );
                                   },
@@ -156,7 +159,8 @@ class _CheckupState extends State<Checkup> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => Example(),
+                                      builder: (context) =>
+                                          check < 5 ? Example() : Example1(),
                                     ),
                                   );
                                 },

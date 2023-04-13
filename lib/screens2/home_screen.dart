@@ -13,6 +13,7 @@ import 'package:http/http.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
 import '../form/visitclinic.dart';
+import '../model/output.dart';
 import '../symptoms/cold.dart';
 
 // ignore: must_be_immutable
@@ -106,6 +107,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
   }
 
   final TextEditingController _input = TextEditingController();
+  late String Store;
 
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -610,6 +612,21 @@ class _HomeScreen1State extends State<HomeScreen1> {
               ),
             ),
           ),
+          Center(
+            child: TextButton(
+                onPressed: () {
+                  // Store = _input.text;
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => output(Store)));
+                },
+                child: Text(
+                  "Check Rating",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF7165D6)),
+                )),
+          )
         ],
       ),
     );

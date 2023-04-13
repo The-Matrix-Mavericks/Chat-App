@@ -112,7 +112,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context);
               },
               child: Text('Cancel'),
-              
             ),
           ],
         );
@@ -129,8 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color(0xFF7165D6),
         title: const Center(
           child: Text(
-            "Clinic Re-Scheduling Appointment",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            "Re-Scheduling Appointment",
+            style: TextStyle(
+                fontWeight: FontWeight.w400, color: Colors.white, fontSize: 25),
           ),
         ),
       ),

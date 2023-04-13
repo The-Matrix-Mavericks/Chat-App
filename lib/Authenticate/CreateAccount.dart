@@ -54,9 +54,11 @@ class _CreateAccountState extends State<CreateAccount> {
                             ),
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => WelcomeScreen1()));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => WelcomeScreen1(),
+                                ),
+                              );
                             }),
                       ),
                       Padding(

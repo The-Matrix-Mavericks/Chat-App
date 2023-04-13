@@ -30,6 +30,7 @@ dependencies:
   url_launcher: ^6.1.10
   # dependencies:
   flutter_web_browser: "^0.17.1"
+  tflite: ^1.1.2
   # upi_pay: ^0.2.4
   # appinio_swiper: ...
 
