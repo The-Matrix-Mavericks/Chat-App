@@ -586,6 +586,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
                           ),
                           Text(
                             "Temp",
+
                             style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
@@ -615,7 +616,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
           Center(
             child: TextButton(
                 onPressed: () {
-                  // Store = _input.text;
+                  // Store =_input.text;
                   // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => output(Store)));
                 },
