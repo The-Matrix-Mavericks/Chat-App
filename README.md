@@ -1,19 +1,4 @@
-# chat
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.# Patient Management and Video Conference App
+# Patient Management and Video Conference App
 
 ## Overview
 This project is a comprehensive patient management and video conference application designed to facilitate secure and efficient communication between doctors and patients. It includes several key features such as Firebase authentication for user privacy, a live video conference system, 24/7 medical assistant powered by ChatGPT API, and a one-minute disease prediction checkup using machine learning.
